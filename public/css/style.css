@@ -1,0 +1,350 @@
+*{
+  font-family: "Andale Mono", AndaleMono, monospace;
+}
+#space{
+  overflow: auto;
+  overflow-x: hidden;
+  position: absolute;
+  width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  border: solid 25px rgb( 13, 19, 19);
+}
+#space::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb( 33, 39, 39);
+}
+ 
+#space::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#space::-webkit-scrollbar-thumb {
+  background-color: rgb( 103, 109, 109);
+}
+#space::-webkit-scrollbar-thumb:hover{
+  background-color: rgb( 123, 129, 129);
+}
+body{
+  margin: 0 0;
+}
+video{
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba( 61, 74, 74, 1);
+  transform: translate( -50%, -50%);
+}
+header{
+  left: 0px;
+  width: 100%;
+  z-index: 600;
+  height: 60px;
+  position: fixed;
+  color: rgb( 190, 200, 200);
+}
+header #menuI, header #menuD{
+  top: 0px;
+  height: 60px;
+  position: absolute;
+  width: calc( 50% - 100px);
+  background: rgba( 1, 1, 1, 0);
+}
+header #menuI{
+  left: 0px;
+}
+header #menuD{
+  right: 0px;
+}
+header #menuI a, header #menuD a{
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: 10%;
+  padding: 8px 8px;
+  margin-right: 10%;
+  position: relative;
+  text-decoration: none;
+  color: rgb( 210, 210, 210);
+}
+header #menuI a{
+  float: right;
+}
+header #menuD a{
+  float: left;
+}
+header #menuI a:after, header #menuD a:after{
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  content: "";
+  bottom: 0px;
+  position: absolute;
+  transition: width 0.4s;
+  transform: translateX(-50%);
+  background: rgb( 220, 220, 220);
+}
+header #menuI a:hover:after, header #menuD a:hover:after{
+  width: 100%;
+}
+.ico{
+  width: 50px;
+  height: 50px; 
+  position: absolute;
+}
+a[href="#cover"]{
+  top: 8px;
+  left: 50%;
+  z-index: 600;
+  position: relative;
+  transform: translateX(-50%);
+}
+a[href="#cover"]:before, a[href="#cover"]:after{
+  transform: all linear 0.2s;
+}
+a[href="#cover"]:before{
+  top: 60px;
+  opacity: 0;
+  display: table;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: absolute;
+  padding-bottom: 4px;
+  color: rgb( 220, 220, 220);
+  transform: translateX(
+    calc(-50% + 25px)
+  );
+  content: "MANANTIALES DE SANTIAGO";
+  background: rgba( 11, 11, 11, 0.7);
+  box-shadow: 0px 0px 5px rgba( 1, 1, 1, 0.6);
+}
+a[href="#cover"]:after{
+  top: 50px;
+  left: 10px;
+  opacity: 0;
+  content: "";
+  max-width: 0;
+  max-height: 0;
+  position: absolute;
+  border-top: 0px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid rgba( 11, 11, 11, 0.7);
+}
+
+a[href="#cover"]:hover:after, a[href="#cover"]:hover:before{
+  opacity: 1;
+}
+#logo{
+  top: 35px;
+  left: 50%;
+  display: table;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transform: translateX(-50%);
+  color: rgb( 210, 210, 210);
+}
+#logo span:nth-child(2n){
+  color: rgb( 120, 130, 130) !important;
+}
+#cover{
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 300;
+  position: absolute;
+  background: linear-gradient( 
+    transparent 50%, 
+    rgba( 1, 1, 1, 0.2) 50%
+  );
+  background-size: 40px;
+  background-color: rgba( 21, 34, 34, 0.8);
+}
+#mico{
+  left: 50%;
+  width: 12px;
+  height: 26px;
+  bottom: 10px;
+  position: absolute;
+  border-radius: 8px 8px;
+  transform: translateX( -50%);
+  border: solid 2px rgb( 140, 140, 140);
+}
+#mico:before{
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  position: absolute;
+  border-radius: 50% 50%;
+  animation: mouse 1s infinite;
+  background: rgb( 140, 140, 140);
+}
+@keyframes mouse{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    top: 2px;
+  }
+  100%{
+    top: 16px;
+    opacity: 0;
+  }
+}
+#contentC{
+  top: 50%;
+  left: 50%;
+  width: 850px;
+  height: auto;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  text-transform: uppercase;
+  color: rgb( 190, 190, 190);
+  transform: translate( -50%, -50%);
+}
+#hCover{
+  left: 0px;
+  top: -100px;
+  width: 100%;
+  z-index: 500;
+  height: 100px;
+  position: fixed;
+  border-radius: 50% 50%;
+  box-shadow: 0px 0px 150px 100px rgba( 1, 1, 1, 1);
+}
+#container{
+  top: 100%;
+  width: 100%;
+  min-height: 400%;
+  position: absolute;
+}
+.c{
+  width: 100%;
+  height: 25%;
+  position: absolute;
+}
+.c1{
+  top: 0%;
+  background-color: rgb( 42, 51, 52);
+}
+.c2{
+  top: 25%;
+  background-color: rgba( 19, 27, 27, 0.93);
+}
+.c3{
+  top: 50%;
+  background-color: rgb( 39, 47, 47);
+}
+.c4{
+  top: 75%;
+  background-color: rgba( 19, 27, 27, 0.93);
+}
+.c3 #blockI{
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  z-index: 300;
+  cursor: pointer;
+  position: absolute;
+  background: rgba( 33, 33, 33, 0.8);
+}
+.c3 #blockI:before{
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  position: absolute;
+  text-transform: uppercase;
+  color: rgb( 170, 170, 170);
+  content: "click para habilitar";
+  transform: translate(-50%, -50%);
+}
+.active{
+  display: block;
+}
+.inactive{
+  display: none;
+}
+.c3 iframe{
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+  position: absolute;
+}
+.c3 .container p{
+  max-width: 35%;
+}
+.container{
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: auto;
+  position: absolute;
+  transform: translate( -50%, -50%);
+}
+.container h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb( 150, 150, 150);
+}
+.container p{
+  font-size: 20px;
+  color: rgb( 130, 130, 130);
+}
+.container p span{
+  font-size: 16px !important;
+}
+.cProducts{
+  width: 20%;
+  height: 0px;
+  float: left;
+  margin-left: 2.5%;
+  position: relative;
+  margin-right: 2.5%;
+  padding-bottom: 19%;
+  display: inline-block;
+  background: rgb( 120, 120, 120);
+}
+.cProducts *{
+  cursor: default;
+}
+.cProducts:last-child{
+  margin-top: 20px;
+}
+.cProducts .nom{
+  bottom: 0px; 
+  width: 100%;
+  height: 30px;
+  z-index: 300 !important;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba( 240, 240, 240, 0.2);
+}
+.cProducts .pre{
+  top: 50%;
+  left: 50%;
+  z-index: 300;
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  color: rgba( 33, 33, 33, 0.8);
+  transform: translate( 
+    -50%, 
+    calc(-50% - 12px)
+  );
+}
