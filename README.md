@@ -1,4 +1,5 @@
 <h1>Web Design For Water</h1>
+<img src="Aqua.png" width="100%">
 <p>
 	Developed with
 	<ul>
@@ -11,7 +12,6 @@
 		<li>No</li>
 	</ul>
 </p>
-<img src="Aqua.png" width="100%">
 <p>
 	Developed by
 	<a href="https://www.facebook.com/AntMenGo">
